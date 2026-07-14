@@ -37,7 +37,7 @@ git clone --depth=1 -b main https://github.com/xiaomeng9597/istoreos-settings pa
 # 定时限速插件
 git clone --depth=1 https://github.com/sirpdboy/luci-app-eqosplus package/luci-app-eqosplus
 git clone https://github.com/EasyTier/luci-app-easytier.git package/luci-app-easytier
-#git clone https://github.com/QiuSimons/luci-app-daed package/dae
+git clone https://github.com/QiuSimons/luci-app-daed package/dae
 
 
 # 增加nsy_g68-plus
