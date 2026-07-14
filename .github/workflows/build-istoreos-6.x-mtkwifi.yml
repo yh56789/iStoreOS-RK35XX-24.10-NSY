@@ -161,6 +161,15 @@ jobs:
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
 
+    - name: Fix GOEXPERIMENT for daed
+      run: |
+        # 方法A: 直接修改Makefile
+        cd openwrt
+        if [ -f "package/dae/daed/Makefile" ]; then
+          sed -i 's/GOEXPERIMENT=[^ ]*/GOEXPERIMENT=newinliner/g' package/dae/daed/Makefile
+          echo "Fixed GOEXPERIMENT in Makefile"
+        fi
+        
     - name: 编译固件
       id: compile
       run: |
